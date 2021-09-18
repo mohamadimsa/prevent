@@ -30,14 +30,29 @@ export const useAuth = () => {
                     }
                     dispatch(connection(data));
                 })
-
-       
-
+    }
+    
+    const inscription = async (username, email, password) => {
+        let formData = new FormData();
+        formData.append("login", username);
+        formData.append("email", email);
+        formData.append("password", md5(password));
+        const header = {
+            "Content-Type": "multipart/form-data"
+        }
+      const reponse = await axios.post("https://api.betaseries.com/members/signup?key=a81e35d58dd5", formData, header)
+            .then((res) => {
+                console.log(res.data)   
+            })
+            .catch(e => {
+                console.log(e.response.data)
+            })
     }
 
 
 
     return {
-        authentification
+        authentification,
+        inscription
     }
 }
