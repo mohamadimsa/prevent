@@ -1,13 +1,15 @@
 import React from "react";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const SerieStack = createNativeStackNavigator();
+import  HomeScreen from '../screen/HomeScreen';
+import DetaillSerie from '../screen/DetailleSerie';
 
-const FilmStackScreen = () => {
+const SerieStackScreen = () => {
     return (
         <SerieStack.Navigator>
-            <SerieStack.Screen name="Listeserie" component={}/>
-            <SerieStack.Screen name="DetaillSerie" component={}/>
+            <SerieStack.Screen name="Home" component={HomeScreen} />
+            <SerieStack.Screen name="DetaillSerie" component={DetaillSerie} />
         </SerieStack.Navigator>
     );
 }
-export default FilmStackScreen;
+export default SerieStackScreen;
