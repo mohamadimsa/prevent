@@ -14,7 +14,8 @@ const ConnectionScreen = ({navigation})=>{
     return(
         <View>
             <Text>screen connection moh</Text>
-            <Button title='se connecter' onPress={()=>authentification('petubrt@gmail.com','mohamadiMsa')}></Button>
+            <Button title='se connecter' onPress={()=>authentification('tnifasshouda@gmail.com','houda123')}></Button>
+            <Button title='inscription' onPress={()=>navigation.navigate('inscription')}></Button>
         </View>
     )
 }
