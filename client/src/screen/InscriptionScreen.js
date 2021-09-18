@@ -1,14 +1,21 @@
-import React from "react";
-import { View , Text, Button} from "react-native";
+import React,{useState} from "react";
+import { View , Text, Button, TextInput} from "react-native";
 import { useAuth } from "../api/auth/useAuth";
 
 
 const InscriptionScript = ()=>{
-    const {inscription} = useAuth()
+    const {inscription} = useAuth();
+    const [email,setEmail] = useState();
+    const [password,setPassword] = useState();
+    const [username,setUsername] = useState();
+  
+
     return(
         <View>
-            <Text>inscription</Text>
-            <Button title="s'inscrire" onPress={()=>{inscription('houda1234','tnifasshouda@gmail.com','houda123')}}/>
+            <TextInput  value={email} placeholder="email" onChangeText={(email)=>{setEmail(email)}}/>
+            <TextInput value={password} secureTextEntry={true} placeholder="mot de passe" onChangeText={(password)=>{setPassword(password)}}/>
+            <TextInput value={username} placeholder="username" onChangeText={(username)=>{setUsername(username)}}/>
+            <Button title="s'inscrire" onPress={()=>{inscription(username,email, password)}}/>
         </View>
     )
 }
