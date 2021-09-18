@@ -12,7 +12,7 @@ const InscriptionScript = ()=>{
 
     return(
         <View>
-            <TextInput  value={email} placeholder="email" onChangeText={(email)=>{setEmail(email)}}/>
+            <TextInput value={email} placeholder="email" onChangeText={(email)=>{setEmail(email)}}/>
             <TextInput value={password} secureTextEntry={true} placeholder="mot de passe" onChangeText={(password)=>{setPassword(password)}}/>
             <TextInput value={username} placeholder="username" onChangeText={(username)=>{setUsername(username)}}/>
             <Button title="s'inscrire" onPress={()=>{inscription(username,email, password)}}/>
