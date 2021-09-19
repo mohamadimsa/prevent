@@ -6,6 +6,11 @@ const DetaillSerieScreen = ()=>{
     return(
         <View>
             <Text>fiche detaile serie</Text>
+
+            
+
+
+
         </View>
     )
 }
