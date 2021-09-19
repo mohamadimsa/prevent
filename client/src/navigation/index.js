@@ -11,7 +11,7 @@ import DrawerScreen from'./Draw';
 const RootStackScreen = () => {
     const user = useSelector(isAUth)
     return(
-  <RootStack.Navigator headerMode="none">
+  <RootStack.Navigator  screenOptions={{headerShown: false}}>
     {user ? (
       <RootStack.Screen name="App"component={DrawerScreen} options={{animationEnabled: false}}/>
     ) : (<RootStack.Screen name="Auth" component={AuthStackScreen} options={{animationEnabled: false}}/>
