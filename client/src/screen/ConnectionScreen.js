@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, Button, TextInput } from "react-native";
 import { useSelector } from "react-redux";
-import { error, isAUth } from "../../src/redux/selectors";
+import { token, isAUth } from "../../src/redux/selectors";
 import { useAuth } from "../api/auth/useAuth";
 
 const ConnectionScreen = ({ navigation }) => {
-    const e = useSelector(error)
+    const e = useSelector(token)
     const Auth = useSelector(isAUth)
     const { authentification } = useAuth();
     console.log('l utilisateur est authentifier : ' + Auth);
+    console.log(e)
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
