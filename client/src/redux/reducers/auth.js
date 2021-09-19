@@ -23,9 +23,6 @@ export const auth = (state = initialState, action) => {
                 authenticate: true,
                 token: action.payload.data.token,
             })
-
-
-
         default:
             return state
     }
