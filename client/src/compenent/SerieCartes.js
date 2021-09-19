@@ -6,9 +6,9 @@ const SeriesCartes =(props)=>{
 
     return (
         <View>
-           {/*  <Image source={{uri:props.image}}/> */}
+             <Image source={{uri:props.image}}/> 
             <Text>titre : {props.titre}</Text>
-            <Text> description :{props.description.subsrt(0,60)}...</Text>
+            <Text> description :{props.description}...</Text>
         </View>
     )
 
