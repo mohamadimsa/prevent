@@ -19,7 +19,8 @@ const HomeScreen = () => {
                         title={data.title}
                         description={data.description.substr(0, 120)}
                         id={data.id}
-                        button={'button'} />
+                        key={key}
+                         />
                 ))
                 :
                 <SeriesCart />
